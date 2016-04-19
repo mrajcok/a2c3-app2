@@ -1,0 +1,7 @@
+{
+    "question": {  "author": "Harsha", "content": "Is Angular 2 easier to learn than Angular 1?" },
+    "answers":  [ {"author": "Mark",   "content": "yes and no, mostly yes", "accepted": true },
+                  {"author": "David",  "content": "It depends..." }
+                ]
+ }
+  
