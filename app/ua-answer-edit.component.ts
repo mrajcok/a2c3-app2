@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter, ViewChild, ElementRef} from 'angular2/core';
+import {Component, Input, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
 import {RememberService} from './remember.service';
 import {Answer}          from './question-and-answers';
 

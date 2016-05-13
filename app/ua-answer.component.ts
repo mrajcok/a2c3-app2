@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {UaAnswerEditComponent} from './ua-answer-edit.component';
 import {Answer}                from './question-and-answers';
 

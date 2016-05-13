@@ -1,5 +1,6 @@
-/node_modules
+typings/**
+node_modules
 npm-debug.log
 
 *.js
-*.map
+*.js.map
