@@ -17,7 +17,7 @@ import {Answer, QuestionAndAnswers} from './question-and-answers';
       <div class="card">
         <ua-question [question]="questionAndAnswers.question"></ua-question>
         <ua-answer-header [answerCount]="answerCount"></ua-answer-header>
-        <ua-answer *ngFor="#ans of questionAndAnswers.answers; #i=index"
+        <ua-answer *ngFor="let ans of questionAndAnswers.answers; #i=index"
             [answer]="ans" [index]="i+1" (deleteEvent)="deleteAnswer($event)">
         </ua-answer>
       </div>
