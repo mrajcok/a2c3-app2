@@ -1,6 +1,6 @@
 <article>
    <div [ngSwitch]="editing">
-      <div *ngSwitchWhen="true">
+      <div *ngSwitchCase="true">
          <input #input1 [(ngModel)]="question.content" md-input>
          <div>
             <button (click)="save()" md-raised-button class="md-raised md-primary">Save</button>
