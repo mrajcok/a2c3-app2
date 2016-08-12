@@ -1,16 +1,9 @@
 import {Component, OnInit}          from '@angular/core';
-import {HTTP_PROVIDERS}             from '@angular/http';
-import {UaNavComponent}             from './ua-nav.component';
-import {UaQuestionComponent}        from './ua-question.component';
-import {UaAnswerHeaderComponent}    from './ua-answer-header.component';
-import {UaAnswerComponent}          from './ua-answer.component';
-import {QandAService}               from './q-and-a.service';
 import {Answer, QuestionAndAnswers} from './question-and-answers';
+import {QandAService}               from './q-and-a.service';
 
 @Component({
-  selector:   'my-app',
-  providers:  [HTTP_PROVIDERS, QandAService],
-  directives: [UaNavComponent, UaQuestionComponent, UaAnswerHeaderComponent, UaAnswerComponent],
+  selector: 'my-app',
   template: `
     <ua-nav [myTitle]="appTitle"></ua-nav>
     <template [ngIf]="questionAndAnswers">
