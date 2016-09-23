@@ -4,7 +4,6 @@ import {Answer}                from './question-and-answers';
 
 @Component({
    selector: 'ua-answer',
-   directives: [UaAnswerEditComponent],
    template: `
     <article>
         <header>

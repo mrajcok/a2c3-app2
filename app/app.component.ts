@@ -10,7 +10,7 @@ import {QandAService}               from './q-and-a.service';
       <div class="card">
         <ua-question [question]="questionAndAnswers.question"></ua-question>
         <ua-answer-header [answerCount]="answerCount"></ua-answer-header>
-        <ua-answer *ngFor="let ans of questionAndAnswers.answers; #i=index"
+        <ua-answer *ngFor="let ans of questionAndAnswers.answers; let i=index"
             [answer]="ans" [index]="i+1" (deleteEvent)="deleteAnswer($event)">
         </ua-answer>
       </div>

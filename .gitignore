@@ -1,6 +1,5 @@
 typings/**
 node_modules
-npm-debug.log
-
+**/*npm-debug.log.*
 *.js
 *.js.map

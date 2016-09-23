@@ -8,13 +8,14 @@ import { UaNavComponent }          from './ua-nav.component';
 import { UaQuestionComponent }     from './ua-question.component';
 import { UaAnswerHeaderComponent } from './ua-answer-header.component';
 import { UaAnswerComponent }       from './ua-answer.component';
+import { UaAnswerEditComponent }   from './ua-answer-edit.component';
 import { QandAService }            from './q-and-a.service';
 import { RememberService }         from './remember.service';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, HttpModule ],
   declarations: [ AppComponent, UaNavComponent, UaQuestionComponent, 
-    UaAnswerHeaderComponent, UaAnswerComponent ],
+    UaAnswerHeaderComponent, UaAnswerComponent, UaAnswerEditComponent ],
   providers: [ QandAService, RememberService ],
   bootstrap: [ AppComponent ]
 })
