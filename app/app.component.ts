@@ -4,6 +4,8 @@ import {QandAService}               from './q-and-a.service';
 
 @Component({
   selector: 'my-app',
+  // providers: [ ... ], <-- moved to app.module.ts; see HttpModule in "imports", and QandAService in "providers"
+  // dirctives: [ ... ], <-- moved to app.module.ts; see "declarations"
   template: `
     <ua-nav [myTitle]="appTitle"></ua-nav>
     <template [ngIf]="questionAndAnswers">
