@@ -1,3 +1,7 @@
+<a name="2.0.1"></a>
+# 2.0.1 (2016-11-05)
+* provide RememberService in UaAnswerEditComponent
+
 <a name="2.0.0"></a>
 # 2.0.0 (2016-09-22)
 * Angular 2 Final
