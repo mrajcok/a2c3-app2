@@ -7,7 +7,8 @@ import {RememberService} from './remember.service';
    template: `<input #input1 [(ngModel)]="answer.content">
         <br><button (click)="save()" md-raised-button class="md-raised md-primary">Save</button>
             <button (click)="cancel()" md-button md-raised-button class="md-raised">Cancel</button>`,
-   styles: [`input { width: 95%; }`]
+   styles: [`input { width: 95%; }`],
+   providers: [RememberService]
 })
 export class UaAnswerEditComponent {
    @Input() answer: Answer;

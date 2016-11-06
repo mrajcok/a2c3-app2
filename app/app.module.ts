@@ -16,7 +16,7 @@ import { RememberService }         from './remember.service';
   imports: [ BrowserModule, FormsModule, HttpModule ],
   declarations: [ AppComponent, UaNavComponent, UaQuestionComponent, 
     UaAnswerHeaderComponent, UaAnswerComponent, UaAnswerEditComponent ],
-  providers: [ QandAService, RememberService ],
+  providers: [ QandAService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}
