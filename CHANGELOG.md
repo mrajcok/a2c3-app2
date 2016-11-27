@@ -1,3 +1,8 @@
+<a name="2.2.0"></a>
+# 2.2.0 (2016-11-26)
+* Angular v2.2
+  * Move from `typings` to `@types`
+  
 <a name="2.0.1"></a>
 # 2.0.1 (2016-11-05)
 * provide RememberService in UaAnswerEditComponent
