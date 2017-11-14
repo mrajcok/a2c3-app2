@@ -1,14 +1,16 @@
-import {Component, OnInit}          from '@angular/core';
-import {Answer, QuestionAndAnswers} from './question-and-answers';
+import { Component, OnInit }        from '@angular/core';
+import {Answer, QuestionAndAnswers} from './interfaces';
 import {QandAService}               from './q-and-a.service';
 
 @Component({
-  selector: 'my-app',
-  // providers:  [ ... ], <-- moved to app.module.ts; see HttpModule in "imports", and QandAService in "providers"
+  selector: 'app-root',
+  // providers:  [ ... ], <-- moved to app.module.ts; 
+  //                      see HttpClientModule in "imports", and 
+  //                      QandAService in "providers" there
   // directives: [ ... ], <-- moved to app.module.ts; see "declarations"
   template: `
     <ua-nav [myTitle]="appTitle"></ua-nav>
-    <template [ngIf]="questionAndAnswers">
+    <ng-template [ngIf]="questionAndAnswers">
       <div class="card">
         <ua-question [question]="questionAndAnswers.question"></ua-question>
         <ua-answer-header [answerCount]="answerCount"></ua-answer-header>
@@ -16,8 +18,9 @@ import {QandAService}               from './q-and-a.service';
             [answer]="ans" [index]="i+1" (deleteEvent)="deleteAnswer($event)">
         </ua-answer>
       </div>
-    </template>
-    {{errorMsg}}`  // TODO create ErrorBarComponent
+    </ng-template>
+    <div class="error">{{errorMsg}}</div>`,  // TODO create ErrorBarComponent
+  styles: ['.error { margin: 10px; font-size: 14px }']
 })
 export class AppComponent implements OnInit {
    appTitle = 'Udemy Course - Q&A App';
@@ -27,10 +30,17 @@ export class AppComponent implements OnInit {
       console.clear();
    }
    ngOnInit() {
+      // new way, with the service returning an Observable
       this._qaService.getQuestionAndAnswers()
-          .then(
-            questionAndAnswers => this.questionAndAnswers = questionAndAnswers,
-            err => this.errorMsg = <any>err);
+         .subscribe(
+           questionAndAnswers => this.questionAndAnswers = questionAndAnswers,
+           err                => this.errorMsg           = err
+         );
+      // old way, with the service returning a Promise
+      // this._qaService.getQuestionAndAnswers()
+      //    .then(
+      //       questionAndAnswers => this.questionAndAnswers = questionAndAnswers,
+      //       err                => this.errorMsg           = <any>err);
    }
    get answerCount(): number {
       if(!this.hasOwnProperty('questionAndAnswers')) return 0;

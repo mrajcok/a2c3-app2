@@ -1,3 +1,15 @@
+<a name="5.0.0"></a>
+# 5.0.0 (2017-11-13)
+* Angular v5.0
+  * directory structure was changed to match Angular CLI structure
+  * .angular-cli.json was modified to use port 3000
+  * q-and-a.service.ts was modified to use the new HttpClientModule
+    and to return an Observable rather than a Promise
+  * To use this version, first install the Angular CLI globally:
+    * npm install -g @angular/cli
+  * Then, from the project directory, run
+    * ng serve --open
+
 <a name="4.0.0"></a>
 # 4.0.0 (2017-04-13)
 * Angular v4.0

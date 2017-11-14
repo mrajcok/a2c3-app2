@@ -1,6 +1,6 @@
 import {Component, Input, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
-import {Answer}          from './question-and-answers';
-import {RememberService} from './remember.service';
+import {Answer}          from '../interfaces';
+import {RememberService} from '../remember.service';
 
 @Component({
    selector: 'ua-answer-edit',

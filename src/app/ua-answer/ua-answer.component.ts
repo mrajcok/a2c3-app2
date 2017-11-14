@@ -1,10 +1,10 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {UaAnswerEditComponent} from './ua-answer-edit.component';
-import {Answer}                from './question-and-answers';
+import {UaAnswerEditComponent} from '../ua-answer-edit/ua-answer-edit.component';
+import {Answer}                from '../interfaces';
 
 @Component({
-   selector: 'ua-answer',
-   template: `
+  selector: 'ua-answer',
+  template: `
     <article>
         <header>
             <span [class.accepted-answer]="answer.accepted">#{{index}}</span>
