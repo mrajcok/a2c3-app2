@@ -12,5 +12,5 @@ import {Component, Input} from '@angular/core';
      h1 { font-size: 120%; display: inline; color: #D4BD87; }`]
 })
 export class UaNavComponent {
-  @Input('myTitle') title:string;
+  @Input() title: string;
 }

@@ -31,4 +31,4 @@ export class UaQuestionComponent {
         this.editing = false;
         // TODO emit event to let parent know
     }
-}   
+}

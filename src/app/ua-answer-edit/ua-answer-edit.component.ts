@@ -1,4 +1,5 @@
-import {Component, Input, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
+import {Component, AfterViewInit, Input, Output} from '@angular/core';
+import {EventEmitter, ViewChild, ElementRef}     from '@angular/core';
 import {Answer}          from '../interfaces';
 import {RememberService} from '../remember.service';
 
@@ -10,7 +11,7 @@ import {RememberService} from '../remember.service';
    styles: [`input { width: 95%; }`],
    providers: [RememberService]
 })
-export class UaAnswerEditComponent {
+export class UaAnswerEditComponent implements AfterViewInit {
    @Input() answer: Answer;
    @Output() doneEvent = new EventEmitter<string>();
    @ViewChild('input1') input1: ElementRef;

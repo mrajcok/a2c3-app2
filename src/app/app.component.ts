@@ -1,15 +1,15 @@
-import { Component, OnInit }        from '@angular/core';
+import {Component, OnInit}          from '@angular/core';
 import {Answer, QuestionAndAnswers} from './interfaces';
 import {QandAService}               from './q-and-a.service';
 
 @Component({
   selector: 'app-root',
-  // providers:  [ ... ], <-- moved to app.module.ts; 
-  //                      see HttpClientModule in "imports", and 
+  // providers:  [ ... ], <-- moved to app.module.ts;
+  //                      see HttpClientModule in "imports", and
   //                      QandAService in "providers" there
   // directives: [ ... ], <-- moved to app.module.ts; see "declarations"
   template: `
-    <ua-nav [myTitle]="appTitle"></ua-nav>
+    <ua-nav [title]="appTitle"></ua-nav>
     <ng-template [ngIf]="questionAndAnswers">
       <div class="card">
         <ua-question [question]="questionAndAnswers.question"></ua-question>
@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
       //       err                => this.errorMsg           = <any>err);
    }
    get answerCount(): number {
-      if(!this.hasOwnProperty('questionAndAnswers')) return 0;
+      if (!this.hasOwnProperty('questionAndAnswers')) { return 0; }
       return this.questionAndAnswers.answers.length;
    }
    deleteAnswer(answer: Answer) {

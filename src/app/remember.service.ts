@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 
-@Injectable() 
+@Injectable()
 export class RememberService<T> {
     content: T;
     // public API
