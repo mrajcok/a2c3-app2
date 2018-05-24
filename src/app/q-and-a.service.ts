@@ -7,7 +7,7 @@ import { QuestionAndAnswers }            from './interfaces';
 
 @Injectable()
 export class QandAService {
-    assetUrl = './assets/q-and-a.json3';
+    assetUrl = './assets/q-and-a.json';
     // assetUrl = './assets/bad-url.json';  // use this line instead to generate an error
     constructor(private _http: HttpClient) {}
     private handleError(operation: String, url: string) {
