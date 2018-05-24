@@ -1,4 +1,4 @@
-# A2c3App2Cli
+# A2c3App2
 
 This project was tested with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
