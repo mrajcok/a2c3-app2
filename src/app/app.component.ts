@@ -30,17 +30,11 @@ export class AppComponent implements OnInit {
       console.clear();
    }
    ngOnInit() {
-      // new way, with the service returning an Observable
       this._qaService.getQuestionAndAnswers()
-         .subscribe(
-           questionAndAnswers => this.questionAndAnswers = questionAndAnswers,
-           err                => this.errorMsg           = err
-         );
-      // old way, with the service returning a Promise
-      // this._qaService.getQuestionAndAnswers()
-      //    .then(
-      //       questionAndAnswers => this.questionAndAnswers = questionAndAnswers,
-      //       err                => this.errorMsg           = <any>err);
+          .subscribe(
+            questionAndAnswers => this.questionAndAnswers = questionAndAnswers,
+            err                => this.errorMsg           = err,
+          );
    }
    get answerCount(): number {
       if (!this.hasOwnProperty('questionAndAnswers')) { return 0; }

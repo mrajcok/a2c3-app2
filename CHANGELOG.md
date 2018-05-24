@@ -1,3 +1,12 @@
+# 6.0.0 (2018-05-23)
+* Angular v6.0
+  * angular-cli.json is replaced with angular.json
+  * package-lock.json added
+  * To use this version, first install the Angular CLI globally:
+    * npm install -g @angular/cli
+  * Then, from the project directory, run
+    * ng serve --open
+
 <a name="5.0.0"></a>
 # 5.0.0 (2017-11-13)
 * Angular v5.0
