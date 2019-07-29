@@ -13,7 +13,7 @@ import {Question}  from '../interfaces';
 })
 export class UaQuestionComponent {
     @Input() question: Question;
-    @ViewChild('input1') input1: ElementRef;
+    @ViewChild('input1', {static: false}) input1: ElementRef;
     editing = false;
     savedContent: string;
     edit() {

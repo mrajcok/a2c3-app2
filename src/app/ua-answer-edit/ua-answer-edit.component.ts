@@ -14,7 +14,7 @@ import {RememberService} from '../remember.service';
 export class UaAnswerEditComponent implements AfterViewInit {
    @Input() answer: Answer;
    @Output() doneEvent = new EventEmitter<string>();
-   @ViewChild('input1') input1: ElementRef;
+   @ViewChild('input1', {static: false}) input1: ElementRef;
    originalContent: string;
    constructor(private _rememberService: RememberService<string>) { }
    ngAfterViewInit() {

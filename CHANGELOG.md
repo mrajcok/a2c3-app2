@@ -1,3 +1,11 @@
+<a name="8.1.3"></a>
+# 8.1.3 (2019-07-28)
+* Angular v8.1.3
+  * To use this version, first install the Angular CLI globally:
+    * npm install -g @angular/cli
+  * Then, from the project directory, run
+    * ng serve --open
+
 <a name="7.1"></a>
 # 7.1 (2018-12-19)
 * Angular v7.1.4
