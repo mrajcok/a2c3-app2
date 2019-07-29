@@ -1,11 +1,16 @@
 # A2c3App2
 
-This project was tested with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+This project was tested with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
 ## Development server
 
 First install the Angular CLI globally:
   * npm install -g @angular/cli
+
+Clone the repo and install the packages:
+  * git clone https://github.com/mrajcok/a2c3-app2.git
+  * cd a2c3-app2
+  * npm i
 
 Then run `ng serve --open` for a dev server. This should open `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
 
